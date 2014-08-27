@@ -18,7 +18,8 @@ namespace Week1Practice
             // 3. Declare a boolean value called "myBool" and set it equal to true or false;
             bool myBool = true;
             // 4. Declare a new list of strings called "productsList" and set it equal to "basketball", "baseball glove", "tennis shoes", "hockey puck"
-            //WAIT ON LISTS
+            List<string> productsList = new List<string>(){"basketball", "baseball glove", "tennis shoes", "hockey puck"};
+
 
             // PRINTING VARIABLES TO THE CONSOLE USING CONSOLE.WRITELINE()
             // 1. Print your name to the console using the format: "My name is <myName> and I'm a beast of a programmer"
@@ -28,6 +29,11 @@ namespace Week1Practice
             // 3. Print out your boolean value using the format: "I set my boolean value equal to <myBool>"
             Console.WriteLine("I set my boolean value equal to " + myBool);
             // 4. Using a For loop, print out each value in productsList.
+            foreach (string item in productsList)
+            {
+                Console.WriteLine(item);
+            }
+
 
             // FOR LOOP PRACTICE
             // 1. Create a for loop that prints out the numbers 1 to 10.
@@ -100,7 +106,12 @@ namespace Week1Practice
                 Console.WriteLine("My name, " + myName + ", has " + myName.Length + " in it.");
             }
             // 2. Print out the number of items in your list using the format: "My product list has <number of items> in it."
+            Console.WriteLine("My product list has " + productsList.Count() + " items in it.");
             // 3. Print out the number of letters of each item in productsList using the format: "<product> has <number of letters> in it."
+            foreach (string s in productsList)
+            {
+                Console.WriteLine(s + " has " + s.Length + " letters in it.");
+            }
 
             // DECLARING AND CALLING FUNCTIONS
             // 1. Create a function called "Greeting" that takes one string parameter called "name".  This function will print "Hello <name>"
