@@ -79,27 +79,30 @@ namespace Week1Practice
             // 4. Create a function called "TripleIt" that takes one integer parameter called "number".  This function will return the number times 3.
             // 5. Using your TripleIt function as part of the parameter for Console.WriteLine(), 
             //      call your TripleIt function using the parameter of 10 to print out "10 tripled is <TripleIt Function Call>"
+            Console.WriteLine("10 tripled is " + TripleIt(10));
             // 6. Using your TripleIt function as part of the parameter for Console.WriteLine(), 
             //      call your TripleIt function using the parameter of myAge to print out "<myAge> tripled is <TripleIt Function Call>"
-
+            Console.WriteLine(myAge + " tripled is " + TripleIt(myAge));
             // 7. Create a function called "RealMultiply" that takes two integer parameters called "num1", and "num2".  This function will return the num1 * num2.
             // 8. Using your RealMultiply function as part of the parameter for Console.WriteLine(), 
             //      call your RealMultiply function using the parameter of 5 and 10 to print out the returned value from your function.
+            Console.WriteLine(RealMultiply(5, 10));
             // 9. Using your RealMultiply function as part of the parameter for Console.WriteLine(), 
             //      call your RealMultiply function using the parameter of 2 and myAge to print out the returned value from your function.
+            Console.WriteLine(RealMultiply(2, myAge));
 
             //FUNCTION CALL MADNESS!
             // 1. Call your SuperLoop function using the following parameters:
             //      startNum = Call RealMultiply with the parameters 1, 5
             //      endNum = Call TripleIt with the parameter myAge
             //      increment = Call TripleIt with the parameter of myAge minus 10
+            SuperLoop(RealMultiply(1, 5), TripleIt(myAge), TripleIt((myAge - 10)));
 
             // 2. Call your SuperLoop function using the following parameters:
             //      startNum = Call RealMultiply with the parameters 1, and TripleIt with the parameter of 3.
             //      endNum = Call TripleIt with the parameter RealMultiply with the parameters: myAge, 7
-            //      increment = Call TripleIt with the parameter of myAge minus RealMultiply with the parameters 2, 4.
-
-
+            //      increment = Call TripleIt with the parameter of myAge minus RealMultiply with the parameters 2, 4.	
+            SuperLoop(RealMultiply(1,TripleIt(3)), TripleIt(RealMultiply(myAge,7)), TripleIt(myAge - RealMultiply(2,4)));
         }
 
         //START -- FUNCTION DECLARATIONS 
