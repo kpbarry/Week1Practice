@@ -106,7 +106,15 @@ namespace Week1Practice
         }
 
         //START -- FUNCTION DECLARATIONS 
+        static int TripleIt(int number)
+        {
+            return (number * 3);
+        }
 
+        static int RealMultiply(int num1, int num2)
+        {
+            return num1 * num2;
+        }
         //Example function declaration
         static void MyFunction(string myParameter)
         {
